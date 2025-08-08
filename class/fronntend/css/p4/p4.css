@@ -1,0 +1,29 @@
+
+#section{
+    color: white;
+    position: absolute;
+    padding: 20px;
+    margin: 20px;
+    width: 960px;
+    height: 720px;
+
+    background: linear-gradient(135deg, cornflowerblue, white);
+}
+
+.main_form .form1{
+    background-color: black;
+    text-decoration-color: white;
+
+    width: 20%;
+}
+.form2{
+    width: 60%;
+    text-decoration-color: white;
+    background-color: black;
+    margin: 5px;
+}
+
+{
+    color: white;
+}
+
