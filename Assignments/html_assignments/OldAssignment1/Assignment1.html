@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>All Image Examples</title>
+</head>
+<body>
+
+<h3>1. Basic Image</h3>
+<img src="https://picsum.photos/id/237/600/400" alt="Sample image">
+
+<h3>2. Resized 200x150</h3>
+<img src="https://picsum.photos/id/237/600/400" alt="Sample image" width="200" height="150">
+
+<h3>3. Lazy Loading</h3>
+<img src="https://picsum.photos/id/237/600/400" alt="Sample image" loading="lazy" style="display:block;max-width:100%;">
+
+<h3>4. Title Tooltip</h3>
+<img src="https://picsum.photos/id/237/600/400" alt="Sample image" title="A helpful tooltip" style="max-width:100%;">
+
+<h3>5. Image Map</h3>
+<img src="https://picsum.photos/id/237/600/400" alt="Mapped image" usemap="#m" style="max-width:100%;height:auto;">
+<map name="m">
+<area shape="rect" coords="20,20,200,150" href="https://example.com/rect" alt="Rectangle">
+<area shape="circle" coords="450,200,60" href="https://example.com/circle" alt="Circle">
+</map>
+
+<h3>6. Responsive Image with srcset</h3>
+<img src="https://picsum.photos/id/237/640/426" alt="Responsive image" srcset="https://picsum.photos/id/237/320/213 320w, https://picsum.photos/id/237/640/426 640w, https://picsum.photos/id/237/1024/683 1024w" sizes="(max-width: 600px) 100vw, 600px" style="width:100%;height:auto;">
+
+<h3>7. Image in Paragraph (Text Wrap)</h3>
+<p><img src="https://picsum.photos/id/237/200/150" alt="Inline image" style="float:left;margin:0 12px 8px 0;">This text wraps around the image. It keeps flowing beside the image to demonstrate simple text wrap using inline CSS. Add more text so the wrapping is obvious across multiple lines.</p>
+
+<h3>8. Width Only</h3>
+<img src="https://picsum.photos/id/237/600/400" alt="Width only" width="250" style="height:auto;">
+
+<h3>9. Height Only</h3>
+<img src="https://picsum.photos/id/237/600/400" alt="Height only" height="180" style="width:auto;">
+
+<h3>10. Side by Side</h3>
+<img src="https://picsum.photos/id/237/600/400" alt="One" style="width:150px;height:100px;margin-right:10px;vertical-align:top;">
+<img src="https://picsum.photos/id/237/600/400" alt="Two" style="width:150px;height:100px;margin-right:10px;vertical-align:top;">
+<img src="https://picsum.photos/id/237/600/400" alt="Three" style="width:150px;height:100px;vertical-align:top;">
+
+<h3>11. Circular Image</h3>
+<img src="https://picsum.photos/id/237/400/400" alt="Circular image" style="width:200px;height:200px;border-radius:50%;object-fit:cover;">
+
+</body>
+</html>
