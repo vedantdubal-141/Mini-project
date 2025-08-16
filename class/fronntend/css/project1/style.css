@@ -1,0 +1,85 @@
+/* page3.css - cleaned & consolidated */
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: #f4f4f4;
+    font-family: 'Instrument Sans', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+/* canvas/frame */
+#frame {
+    position: relative;
+    width: 739px;
+    height: 349px;
+    background: #fff;
+    overflow: hidden;
+}
+
+/* --- Top images (reusable) --- */
+.card-image {
+    position: absolute;
+    width: 196px;
+    height: 138px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* better scaling than explicit px sizes */
+}
+
+/* positions for each image */
+.card-image--fence       { left: 33px;  top: 33px;  background-image: url('fence.jpg'); }
+.card-image--view        { left: 271px; top: 33px;  background-image: url('view.jpg'); }
+.card-image--gramophone  { left: 509px; top: 33px;  background-image: url('gramophone.jpg'); }
+
+/* --- Card (white rectangle) --- */
+.card {
+    position: absolute;
+    width: 196px;
+    height: 143px;
+    background: #ffffff;
+    box-shadow: 9px 8px 5px rgba(0,0,0,0.25);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    left: 0; top: 0; /* overrides via modifiers below */
+}
+
+/* per-card positions (these replace repeated #rectangle positions) */
+.card--1 { left: 33px;  top: 172px; }
+.card--2 { left: 271px; top: 172px; }
+.card--3 { left: 509px; top: 172px; }
+
+/* Title / body / button */
+.card__title {
+    margin: 0;
+    font-family: 'Inknut Antiqua', serif;
+    font-weight: 300;
+    font-size: 12px;
+    color: #000;
+}
+
+.card__text {
+    margin: 6px 0 0;
+    font-size: 9px;
+    color: #757575;
+    line-height: 1.2;
+    /* allow wrapping (removed white-space:nowrap from export) */
+}
+
+.card__button {
+    width: 169px;
+    height: 32px;
+    border-radius: 4px;
+    background: #ffffff;
+    border: 0.5px solid #000;
+    align-self: center;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
