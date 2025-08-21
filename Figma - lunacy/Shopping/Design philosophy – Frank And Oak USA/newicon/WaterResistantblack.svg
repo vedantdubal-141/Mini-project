@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="0 0 50 50">
+  <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+  <title>WaterResistant-black</title>
+  <desc>Created with Sketch.</desc>
+  <g id="WaterResistant" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+    <g transform="translate(7.000000, 3.000000)" stroke="#000000" stroke-width="2">
+      <line x1="35.1758769" y1="30.2696" x2="1.06633846" y2="30.2696" id="Stroke-1"></line>
+      <path d="M0.852553846,43.8831385 C3.69932308,41.0677538 10.3639385,39.0905231 18.1325538,39.0905231 C25.8808615,39.0905231 32.5307077,41.0585231 35.3904,43.8609846" id="Stroke-3"></path>
+      <path d="M18.1296,0.351876923 C19.0083692,1.6368 20.1456,3.33895385 21.2736,5.16110769 C25.4422154,11.8921846 25.8834462,14.4084923 25.8834462,15.1820308 C25.8834462,19.0737231 22.4016,22.2343385 18.1222154,22.2343385 C13.8409846,22.2343385 10.3591385,19.0737231 10.3591385,15.1820308 C10.3591385,14.4084923 10.8096,11.8995692 14.9597538,5.18695385 C16.0969846,3.35556923 17.2360615,1.64418462 18.1296,0.351876923 Z" id="Stroke-5"></path>
+    </g>
+  </g>
+</svg>
