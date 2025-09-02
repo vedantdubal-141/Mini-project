@@ -1,0 +1,113 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.game-container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.scorecards-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.score-block {
+    width: 380px;
+    height: 350px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.blue {
+    background-color: #3b5998;
+    align-items: center;
+    justify-content: center;
+}
+
+.green {
+    background-color: #4CAF50;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.team-name {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.runs-display {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.ball-score {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.total-score {
+    font-size: 40px;
+    font-weight: 500;
+    color: white;
+    margin: 0;
+}
+
+
+.buttons-row {
+    display: flex;
+    gap: 20px;
+}
+.button-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+}
+
+.bat-button {
+    background-color: #ffc107;
+    background-image: url('bat.svg');
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.reload-button {
+    background-color: #f44336;
+    background-image: url('reload.svg');
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
