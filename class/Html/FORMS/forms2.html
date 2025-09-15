@@ -1,0 +1,86 @@
+                                                                              <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+</head>
+<body>
+<H4> forms ?"</H4>
+<form>
+  <div>
+    <label for="first name"> Username
+    </label>
+    <input type="text" id="first name" name="first name"
+           placeholder="Enter your first name" autofocus>
+    <label for="last name"> last name
+    </label>
+    <input type="text" id="last name" name="last name"
+           placeholder="Enter your lastname" autofocus>
+
+  </div>
+  <div>
+    <label for="date">Date</label>
+    <input type="date" id="date">
+
+    <input type="number" value="age" min="0" max="100" id="number" oninput="output.value = this.value">
+    <label for="number">Age </label>
+  </div>
+
+  <div>
+    <label for="Gender" ></label>
+    <select id="Gender" name="gender">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
+    <label for="email">email</label>
+    <input type="email" id="email"  value="">
+  </div>
+
+  <div>
+    <p>Role:</p>
+    <input type="radio" id="Junior" name="Role" value="Junior">
+    <label for="Junior">Junior</label>
+    <input type="radio" id="Mid level developer" name="Role" value="Mid level developer">
+    <label for="Mid level developer">Mid level developer</label>
+    <input type="radio" id="Senior developer" name="Role" value="Senior developer">
+    <label for="Senior developer">Senior developer</label>
+
+  </div>
+
+
+  <div>
+    <p>Language:</p>
+    <input type="checkbox" id="Java" name="Java" value="Yes">
+    <label for="Java"> JAva</label>
+    <input type="checkbox" id="JavaScript" name="JavaScript" value="Yes">
+    <label for="JavaScript"> JavaScript</label>
+    <input type="checkbox" id="PHP" name="PHP" value="Yes">
+    <label for="PHP">PHP</label>
+    <input type="checkbox" id="Python" name="Python" value="Yes">
+    <label for="Python">Python</label>
+  </div>
+
+  <div>
+    <label for="password">password</label>
+    <input type="password" id="password" value="">
+    <label for="Confirm password">Confirm password</label>
+    <input type="password" id="Confirm password" value="">
+  </div>
+
+
+  <br>
+  <input type="file" id="file" name="file">
+
+  <div>
+    <input type="reset" id="reset"  value="Reset">
+    <label for=reset>Reset</label>
+    <input type="submit" id="submit"  value="Submit">
+    <label for="Submit">Submit</label>
+  </div>
+
+</form>
+</body>
+
+</html>

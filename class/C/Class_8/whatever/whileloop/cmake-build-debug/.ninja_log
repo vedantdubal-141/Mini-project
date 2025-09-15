@@ -1,0 +1,9 @@
+# ninja log v5
+0	537	7781753417548720	CMakeFiles/whileloop.dir/main.cpp.obj	564bfa1f8bf6e7d
+539	649	7781753418581912	whileloop.exe	fc411eaed2af9b98
+4	521	7781753717593075	CMakeFiles/whileloop.dir/main.cpp.obj	564bfa1f8bf6e7d
+521	615	7781753718486372	whileloop.exe	fc411eaed2af9b98
+4	498	7781754219071934	CMakeFiles/whileloop.dir/main.cpp.obj	564bfa1f8bf6e7d
+498	612	7781754219990382	whileloop.exe	fc411eaed2af9b98
+4	499	7781754350476156	CMakeFiles/whileloop.dir/main.cpp.obj	564bfa1f8bf6e7d
+499	593	7781754351359661	whileloop.exe	fc411eaed2af9b98

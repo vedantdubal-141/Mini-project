@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="0 0 50 50">
+  <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+  <title>Loopback-black</title>
+  <desc>Created with Sketch.</desc>
+  <g id="Loopback" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+    <g id="Loopback-black" transform="translate(4.000000, 12.000000)" stroke="#000000" stroke-width="2">
+      <path d="M24.621161,25.2440954 C25.9893756,25.7334595 27.4635609,26 29,26 L29,26 C36.1797017,26 42,20.1797017 42,13 C42,5.82029825 36.1797017,0 29,0 C21.8202983,0 16,5.82029825 16,13 C16,15.2268432 16.5599016,17.3229143 17.5466067,19.1551154" id="Path"></path>
+      <path d="M8.62116102,25.2440954 C9.98937559,25.7334595 11.4635609,26 13,26 L13,26 C20.1797017,26 26,20.1797017 26,13 C26,5.82029825 20.1797017,0 13,0 C5.82029825,0 0,5.82029825 0,13 C0,15.2268432 0.559901576,17.3229143 1.54660669,19.1551154" id="Path" transform="translate(13.000000, 13.000000) rotate(-180.000000) translate(-13.000000, -13.000000) "></path>
+    </g>
+  </g>
+</svg>

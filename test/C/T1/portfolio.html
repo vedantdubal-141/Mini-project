@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just... Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Cinzel+Decorative:wght@400;700&display=swap');
+
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Cormorant Garamond', serif;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .background-image {
+            background-image: url('http://googleusercontent.com/file_content/0');
+            background-size: cover;
+            background-position: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            filter: grayscale(100%);
+            z-index: -1;
+        }
+
+        .document-frame {
+            position: relative;
+            max-width: 800px;
+            width: 90vw;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 5px solid #fff;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+            padding: 3rem 4rem;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="100" height="100" style="fill:none;stroke:black;stroke-width:3;stroke-dasharray: 5, 2, 1, 2, 1, 2"/><path d="M5,5 L5,95 L95,95 L95,5 Z" stroke="white" stroke-width="2" fill="none" /></svg>') 100 / 10px / 10px stretch;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .title {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            font-weight: 700;
+            letter-spacing: 0.2rem;
+            text-align: center;
+            line-height: 1;
+            margin-bottom: 2rem;
+        }
+
+        .subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            font-style: italic;
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .intro {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
+            line-height: 1.8;
+            text-align: justify;
+            margin-bottom: 2rem;
+        }
+
+        .info-block {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            text-transform: uppercase;
+        }
+
+        .info-item {
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            font-weight: 700;
+            letter-spacing: 0.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .quirk {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            transform: rotate(5deg);
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .document-frame {
+                padding: 2rem 1.5rem;
+            }
+            .info-block {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="background-image"></div>
+
+<div class="document-frame">
+    <h1 class="title">The Portfolio of Just...</h1>
+    <p class="subtitle">An Account of the Study of Game Design & Audio Engineering at Yale</p>
+
+    <p class="intro">
+        Herein lies a chronicle of my scholarly pursuit at Yale University, a journey into the bygone eras of interactive media. My focus is the careful crafting of digital antiquities, where each pixel and synthesized note is a deliberate choice. Through the art of 8-bit retro creation, I seek to design new worlds that evoke the nostalgia and magic of a simpler time. This folio serves as a modest testament to that grand undertaking.
+    </p>
+
+    <div class="info-block">
+        <div class="info-item">Yale University</div>
+        <div class="info-item">Master in Game Design</div>
+        <div class="info-item">Audio Engineer</div>
+    </div>
+
+    <span class="quirk">xD</span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git
+$ git log
+fatal: not a git repository (or any of the parent directories): .git
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git
+$ cd Mini-project
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project (main)
+$ git log
+commit 4edd256e2355f3220bf765d094f6f4ff0f71d46c (HEAD -> main, origin/main, origin/HEAD)
+Author: vedantdubal-141 <vedant.dubal.cg@gmail.com>
+Date:   Tue Aug 19 06:51:20 2025 -0700
+
+    .
+
+commit 20c45c7cbbdeb15e4f181e787212ceab9a868c68
+Author: vedantdubal-141 <vedant.dubal.cg@gmail.com>
+Date:   Sun Aug 17 17:10:57 2025 -0700
+
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project (main)
+$ git pull
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 5 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (5/5), 1.07 KiB | 156.00 KiB/s, done.
+From https://github.com/vedantdubal-141/Mini-project
+   4edd256..860ec25  main       -> origin/main
+Updating 4edd256..860ec25
+error: Your local changes to the following files would be overwritten by merge:
+        Assignments/frontend/css.css
+Please commit your changes or stash them before you merge.
+Aborting
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project (main)
+$ git pull
+Updating 4edd256..860ec25
+Fast-forward
+ Assignments/frontend/css.css | 1 +
+ 1 file changed, 1 insertion(+)
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project (main)
+$ cd frontend
+bash: cd: frontend: No such file or directory
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project (main)
+$ cd Assignment
+bash: cd: Assignment: No such file or directory
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project (main)
+$ cd Assignments
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project/Assignments (main)
+$ cd frontend
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project/Assignments/frontend (master)
+$ rm javascript.javascript
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project/Assignments/frontend (master)
+$ nao css.css
+bash: nao: command not found
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project/Assignments/frontend (master)
+$ ls
+css.css  html.html
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project/Assignments/frontend (master)
+$ nano  css.css
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project/Assignments/frontend (master)
+$ cd ..
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project/Assignments (main)
+$ git push
+Everything up-to-date
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project/Assignments (main)
+$ git push
+Everything up-to-date
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project/Assignments (main)
+$ cd Assignmnets
+bash: cd: Assignmnets: No such file or directory
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project/Assignments (main)
+$ rm -rf frontend
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project/Assignments (main)
+$ mkdir -p test
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project/Assignments (main)
+$ mv test Frontend
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project/Assignments (main)
+$ cd frontend
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project/Assignments/frontend (main)
+$  touch css.css html.html javascript.js
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project/Assignments/frontend (main)
+$ nano css.css
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project/Assignments/frontend (main)
+$ git add .
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project/Assignments/frontend (main)
+$ git commit ">"
+error: pathspec '>' did not match any file(s) known to git
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project/Assignments/frontend (main)
+$ git commit -m "."
+[main 0ec23ef] .
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Assignments/frontend/javascript.js
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project/Assignments/frontend (main)
+$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 28 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 391 bytes | 391.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/vedantdubal-141/Mini-project.git
+   860ec25..0ec23ef  main -> main
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project/Assignments/frontend (main)
+$ git pull
+Already up to date.
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project/Assignments/frontend (main)
+$ mv javascript.js js.js
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project/Assignments/frontend (main)
+$ cp js.js js2.js
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project/Assignments/frontend (main)
+$ rm js.js
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project/Assignments/frontend (main)
+$ touch script.sh
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project/Assignments/frontend (main)
+$ chmod x+ script,sh
+chmod: invalid mode: 'x+'
+Try 'chmod --help' for more information.
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project/Assignments/frontend (main)
+$ chmod x+ script.sh
+chmod: invalid mode: 'x+'
+Try 'chmod --help' for more information.
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project/Assignments/frontend (main)
+$ /.script.sh
+bash: /.script.sh: No such file or directory
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project/Assignments/frontend (main)
+$ ./script.sh
+JustEcho?
+
+Admin@DESKTOP-S2NT4US MINGW64 /d/SHARED'/git/Mini-project/Assignments/frontend (main)
+$

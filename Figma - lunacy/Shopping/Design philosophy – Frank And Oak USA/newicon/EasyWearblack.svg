@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="0 0 50 50">
+  <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+  <title>EasyWear-black</title>
+  <desc>Created with Sketch.</desc>
+  <g id="EasyWear" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+    <g transform="translate(10.000000, 5.000000)" stroke="#000000" stroke-width="2">
+      <path d="M27.9032308,29.7701538 L2.29861538,29.7701538 C1.42476923,29.7701538 0.709384615,29.0547692 0.709384615,28.1809231 L0.709384615,8.784 C0.709384615,7.91169231 1.42476923,7.19630769 2.29861538,7.19630769 L27.9032308,7.19630769 C28.7770769,7.19630769 29.4924615,7.91169231 29.4924615,8.784 L29.4924615,28.1809231 C29.4924615,29.0547692 28.7770769,29.7701538 27.9032308,29.7701538 Z" id="Stroke-1"></path>
+      <path d="M0.709692308,39.8212308 C3.082,37.4750769 8.63738462,35.8273846 15.1096923,35.8273846 C21.5681538,35.8273846 27.1096923,37.4673846 29.4927692,39.8027692" id="Stroke-3"></path>
+      <polyline id="Stroke-5" points="19.8743077 3.32492308 19.8743077 0.711076923 10.8389231 0.711076923 10.8389231 3.32492308"></polyline>
+    </g>
+  </g>
+</svg>

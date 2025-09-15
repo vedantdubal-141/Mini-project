@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="0 0 50 50">
+  <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+  <title>ThermalLined-black</title>
+  <desc>Created with Sketch.</desc>
+  <g id="ThermalLined" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+    <g transform="translate(8.000000, 8.000000)" stroke="#000000" stroke-width="2">
+      <line x1="34.1095385" y1="0" x2="0" y2="0" id="Stroke-1"></line>
+      <path d="M17.0133377,23 C17.6806878,23.6052036 18.0143629,24.6055523 18.0143629,26.001046 C18.0143629,28.0942865 16,30.2047323 16,32.0458927 C16,33.2733329 16.3377792,34.2580354 17.0133377,35" id="Stroke-1"></path>
+      <path d="M10.0133377,23 C10.6806878,23.6052036 11.0143629,24.6055523 11.0143629,26.001046 C11.0143629,28.0942865 9,30.2047323 9,32.0458927 C9,33.2733329 9.33777924,34.2580354 10.0133377,35" id="Stroke-1"></path>
+      <path d="M24.0133377,23 C24.6806878,23.6052036 25.0143629,24.6055523 25.0143629,26.001046 C25.0143629,28.0942865 23,30.2047323 23,32.0458927 C23,33.2733329 23.3377792,34.2580354 24.0133377,35" id="Stroke-1"></path>
+      <path d="M0,13.7926154 C2.84676923,10.9772308 9.51138462,9 17.28,9 C25.0283077,9 31.6781538,10.968 34.5378462,13.7704615" id="Stroke-3"></path>
+    </g>
+  </g>
+</svg>
