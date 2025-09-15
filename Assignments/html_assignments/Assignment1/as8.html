@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Elements Showcase</title>
+</head>
+<body style="font-family: sans-serif; line-height: 1.6;">
+
+<h1 style="text-align: center;">HTML Elements Showcase – Inline vs Block</h1>
+
+<p style="text-align: justify; max-width: 800px; margin: 0 auto 20px;">
+  In HTML, elements are broadly divided into two display categories: **block-level** and **inline**. Understanding this distinction is fundamental to laying out a webpage. A block-level element always starts on a new line and takes up the full available width, stacking vertically. An inline element, on the other hand, only takes up as much width as necessary, allowing other elements to sit next to it on the same line.
+</p>
+
+<p style="text-align: center; margin-bottom: 30px;">
+  <a href="#block-elements" style="margin: 0 10px;">[Block Elements]</a>
+  <a href="#inline-elements" style="margin: 0 10px;">[Inline Elements]</a>
+  <a href="#comparison" style="margin: 0 10px;">[Comparison]</a>
+</p>
+
+<hr style="border: 1px solid #ccc;">
+
+<h2 id="block-elements" style="text-align: center;">Block-level Elements</h2>
+<p style="text-align: center; font-style: italic;">These elements always start on a new line.</p>
+
+<div style="border: 1px solid black; padding: 10px; margin: 10px;">This is a **div** element. It serves as a generic container for other HTML elements. Notice how it takes up the entire width of the page.</div>
+<p style="margin-top: 5px;"><code>&lt;div&gt;</code> is a versatile container element.</p>
+
+<p style="border: 1px solid black; padding: 10px; margin: 10px;">This is a **p** element, a standard paragraph. A new line is automatically added before and after it.</p>
+<p style="margin-top: 5px;"><code>&lt;p&gt;</code> is used for paragraphs of text.</p>
+
+<h1 style="border: 1px solid black; padding: 10px; margin: 10px;">This is an h1 heading.</h1>
+<h2 style="border: 1px solid black; padding: 10px; margin: 10px;">This is an h2 heading.</h2>
+<h3 style="border: 1px solid black; padding: 10px; margin: 10px;">This is an h3 heading.</h3>
+<h4 style="border: 1px solid black; padding: 10px; margin: 10px;">This is an h4 heading.</h4>
+<h5 style="border: 1px solid black; padding: 10px; margin: 10px;">This is an h5 heading.</h5>
+<h6 style="border: 1px solid black; padding: 10px; margin: 10px;">This is an h6 heading.</h6>
+<p style="margin-top: 5px;"><code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code> define different levels of headings and are all block elements.</p>
+
+<ul style="border: 1px solid black; padding: 10px; margin: 10px;">
+  <li>Unordered List Item</li>
+  <li>Another List Item</li>
+</ul>
+<p style="margin-top: 5px;"><code>&lt;ul&gt;</code> creates an unordered list with bullet points.</p>
+
+<ol style="border: 1px solid black; padding: 10px; margin: 10px;">
+  <li>Ordered List Item</li>
+  <li>Another List Item</li>
+</ol>
+<p style="margin-top: 5px;"><code>&lt;ol&gt;</code> creates an ordered list with numbers.</p>
+
+<blockquote style="border: 1px solid black; padding: 10px; margin: 10px;">
+  "The Web is more of a social creation than a technical one."
+</blockquote>
+<p style="margin-top: 5px;"><code>&lt;blockquote&gt;</code> is used to define a block of quoted text.</p>
+
+<hr style="border: 1px solid black; margin: 10px;">
+<p style="margin-top: 5px;"><code>&lt;hr&gt;</code> creates a horizontal rule, a perfect example of a block-level element.</p>
+
+<table style="border: 1px solid black; border-collapse: collapse; margin: 10px;">
+  <tr>
+    <td style="border: 1px solid black; padding: 5px;">Row 1, Cell 1</td>
+    <td style="border: 1px solid black; padding: 5px;">Row 1, Cell 2</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 5px;">Row 2, Cell 1</td>
+    <td style="border: 1px solid black; padding: 5px;">Row 2, Cell 2</td>
+  </tr>
+</table>
+<p style="margin-top: 5px;"><code>&lt;table&gt;</code> defines an HTML table, which is a block-level element.</p>
+
+<hr style="border: 1px solid #ccc;">
+
+<h2 id="inline-elements" style="text-align: center;">Inline Elements</h2>
+<p style="text-align: center; font-style: italic;">These elements sit within a line of text.</p>
+
+<p style="margin-bottom: 20px;">
+  This is a sentence containing a <span style="border: 1px solid black; padding: 2px;">span element</span>, which is a generic inline container.
+</p>
+<p style="margin-top: 5px;"><code>&lt;span&gt;</code> is a generic inline container that doesn't add a new line.</p>
+
+<p style="margin-bottom: 20px;">
+  This text contains a hyperlink to the <a href="https://www.google.com" style="border: 1px solid black; padding: 2px;">Google website</a>.
+</p>
+<p style="margin-top: 5px;"><code>&lt;a&gt;</code> creates a hyperlink, which is an inline element.</p>
+
+<p style="margin-bottom: 20px;">
+  This sentence shows text that is **bold** with the <b>`&lt;b&gt;`</b> tag, text that is <i>italic</i> with the <i>`&lt;i&gt;`</i> tag, and text that is <u>underlined</u> with the <u>`&lt;u&gt;`</u> tag.
+</p>
+<p style="margin-top: 5px;"><code>&lt;b&gt;</code>, <code>&lt;i&gt;</code>, and <code>&lt;u&gt;</code> apply basic inline formatting.</p>
+
+<p style="margin-bottom: 20px;">
+  This sentence uses <strong>strong emphasis</strong> with the <strong>`&lt;strong&gt;`</strong> tag and <em>empathetic emphasis</em> with the <em>`&lt;em&gt;`</em> tag.
+</p>
+<p style="margin-top: 5px;"><code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code> provide semantic inline emphasis.</p>
+
+<p style="margin-bottom: 20px;">
+  A mathematical formula like E = mc<sup>2</sup> uses the <sup>`&lt;sup&gt;`</sup> tag for superscript. The chemical formula for water, H<sub>2</sub>O, uses the <sub>`&lt;sub&gt;`</sub> tag for subscript.
+</p>
+<p style="margin-top: 5px;"><code>&lt;sup&gt;</code> and <code>&lt;sub&gt;</code> are used for inline superscript and subscript.</p>
+
+<p style="margin-bottom: 20px;">
+  This sentence has some <mark style="border: 1px solid black; padding: 2px;">highlighted text</mark> using the `&lt;mark&gt;` tag.
+</p>
+<p style="margin-top: 5px;"><code>&lt;mark&gt;</code> highlights inline text.</p>
+
+<p style="margin-bottom: 20px;">
+  The official name for HTML is <abbr title="HyperText Markup Language" style="border: 1px solid black; padding: 2px;">HTML</abbr>.
+</p>
+<p style="margin-top: 5px;"><code>&lt;abbr&gt;</code> defines an abbreviation.</p>
+
+<p style="margin-bottom: 20px;">
+  The `console.log("Hello World");` code snippet uses the <code>`&lt;code&gt;`</code> tag to represent code.
+</p>
+<p style="margin-top: 5px;"><code>&lt;code&gt;</code> is for short snippets of inline code.</p>
+
+<hr style="border: 1px solid #ccc;">
+
+<h2 id="comparison" style="text-align: center;">Inline vs Block Comparison</h2>
+<p style="text-align: center; font-style: italic;">A quick reference table to show the key differences.</p>
+<table style="width: 80%; margin: 20px auto; border-collapse: collapse;">
+  <caption style="font-weight: bold; padding: 10px;">Differences Between Inline and Block Elements</caption>
+  <thead>
+  <tr style="background-color: #f2f2f2;">
+    <th style="border: 1px solid black; padding: 10px;">Block Elements</th>
+    <th style="border: 1px solid black; padding: 10px;">Inline Elements</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td style="border: 1px solid black; padding: 10px;">`<div>`</td>
+    <td style="border: 1px solid black; padding: 10px;">`<span>`</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 10px;">`<p>`</td>
+    <td style="border: 1px solid black; padding: 10px;">`<a>`</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 10px;">`<h1>` to `<h6>`</td>
+    <td style="border: 1px solid black; padding: 10px;">`<b>`</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 10px;">`<ul>` and `<ol>`</td>
+    <td style="border: 1px solid black; padding: 10px;">`<i>`</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 10px;">`<blockquote>`</td>
+    <td style="border: 1px solid black; padding: 10px;">`<strong>`</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 10px;">`<table>`</td>
+    <td style="border: 1px solid black; padding: 10px;">`<em>`</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 10px;">`<hr>`</td>
+    <td style="border: 1px solid black; padding: 10px;">`<mark>`</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; padding: 10px;">`<form>`</td>
+    <td style="border: 1px solid black; padding: 10px;">`<code>`</td>
+  </tr>
+  </tbody>
+</table>
+
+<hr style="border: 1px solid #ccc;">
+
+<p style="text-align: center; margin-top: 20px;">
+  <a href="#">Back to Top</a>
+</p>
+
+</body>
+</html>
