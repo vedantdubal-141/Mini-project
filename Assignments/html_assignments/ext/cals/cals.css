@@ -1,0 +1,41 @@
+#frame {
+    position: relative;
+    width: 251px;
+    height: 394px;
+    overflow: hidden;
+    background: #000;
+    border-radius: 10px;
+}
+
+#display {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 37px;
+}
+
+.btn {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 44px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn.gray { background: #a2a3a3; color: #000; }
+.btn.dark { background: #505050; color: #fff; }
+.btn.orange { background: #ff9401; color: #000; }
+
+.btn.wide {
+    width: 75px;
+    border-radius: 25px;
+    text-align: left;
+    padding-left: 20px;
+}

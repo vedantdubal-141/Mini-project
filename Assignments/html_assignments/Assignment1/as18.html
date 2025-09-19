@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Media Library</title>
+</head>
+<body id="top">
+
+    <header>
+        <h1>Media Library Collection</h1>
+        <p>This page contains my favorite images, songs, videos, and online embeds.</p>
+    </header>
+
+    <nav>
+        <a href="#images">Images</a> |
+        <a href="#audio">Audio</a> |
+        <a href="#video">Video</a> |
+        <a href="#embeds">Embeds</a>
+    </nav>
+    <hr>
+
+    <!-- Image Gallery -->
+    <section id="images">
+        <h2>Image Gallery</h2>
+        <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Taj-Mahal.jpg" alt="Taj Mahal" title="Taj Mahal" width="300">
+            <figcaption>Taj Mahal at sunrise</figcaption>
+        </figure>
+        <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Himalayas.jpg" alt="Himalayas" title="Himalayas" width="300">
+            <figcaption>Beautiful Himalayas</figcaption>
+        </figure>
+        <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Golden_Temple_Amritsar.jpg" alt="Golden Temple" title="Golden Temple" width="300">
+            <figcaption>Golden Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Eiffel_Tower.jpg" alt="Eiffel Tower" title="Eiffel Tower" width="300">
+            <figcaption>Eiffel Tower in Paris</figcaption>
+        </figure>
+        <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Great_Wall_of_China_July_2006.JPG" alt="Great Wall of China" title="Great Wall" width="300">
+            <figcaption>Great Wall of China</figcaption>
+        </figure>
+        <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Grand_Canyon_view_from_Pima_Point_2010.jpg" alt="Grand Canyon" title="Grand Canyon" width="300">
+            <figcaption>Grand Canyon</figcaption>
+        </figure>
+    </section>
+    <hr>
+
+    <!-- Audio Section -->
+    <section id="audio">
+        <h2>Audio Section</h2>
+        <p>Song 1 (autoplay):</p>
+        <audio controls autoplay>
+            <source src="sahiba-slowed.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <p>Description: Sahiba slowed remix, plays automatically.</p>
+
+        <p>Song 2 (loop):</p>
+        <audio controls loop>
+            <source src="sample-audio2.mp3" type="audio/mpeg">
+        </audio>
+        <p>Description: Calming instrumental music, set to loop.</p>
+
+        <p>Song 3:</p>
+        <audio controls>
+            <source src="sample-audio3.mp3" type="audio/mpeg">
+        </audio>
+        <p>Description: Energetic song with beats.</p>
+    </section>
+    <hr>
+
+    <!-- Video Section -->
+    <section id="video">
+        <h2>Video Section</h2>
+        <figure>
+            <video width="400" height="250" controls poster="poster1.jpg">
+                <source src="sample-video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <figcaption>Video 1: My coding session demo</figcaption>
+        </figure>
+
+        <figure>
+            <video width="400" height="250" controls poster="poster2.jpg">
+                <source src="sample-video2.mp4" type="video/mp4">
+                <track src="subtitles-en.vtt" kind="subtitles" srclang="en" label="English">
+            </video>
+            <figcaption>Video 2: Explainer video with subtitles</figcaption>
+        </figure>
+    </section>
+    <hr>
+
+    <!-- External Embeds -->
+    <section id="embeds">
+        <h2>External Media Embeds</h2>
+        <h3>YouTube Video</h3>
+        <iframe width="420" height="250" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+
+        <h3>Google Map (CodingGita Campus)</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.084152733355!2d80.955!3d26.8467" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+        <h3>Wikipedia Article (HTML Snippet)</h3>
+        <iframe src="https://en.wikipedia.org/wiki/HTML" width="400" height="250"></iframe>
+    </section>
+    <hr>
+
+    <footer>
+        <p><a href="#top">Back to Top</a></p>
+    </footer>
+
+</body>
+</html>
