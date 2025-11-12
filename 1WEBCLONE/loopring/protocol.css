@@ -1,0 +1,224 @@
+/* Protocol Page Specific Styles */
+
+.protocol-hero {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    background: #FAFAFA;
+    /* Slightly off-white for the video section if needed */
+    text-align: center;
+}
+
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.protocol-video {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Throughput Section (White) */
+.throughput-section {
+    padding: 100px 0;
+    text-align: center;
+    background-color: white;
+}
+
+.stat-label {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: 1px;
+}
+
+.stat-number-box {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.digit-card {
+    background: #1F2937;
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    width: 60px;
+    /* Reduced width slightly */
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+.digit-separator {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #1F2937;
+    line-height: 90px;
+    /* Align with cards */
+    margin: 0 -5px;
+    /* Pull closer */
+}
+
+.stat-desc {
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    /* Slightly larger for readability */
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+/* Links Styling */
+.protocol-link-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.protocol-link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none !important;
+    /* Remove default underline */
+    border-bottom: 1px solid currentColor;
+    /* Custom underline */
+    padding-bottom: 2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: opacity 0.2s;
+}
+
+.protocol-link:hover {
+    opacity: 0.8;
+}
+
+.protocol-link i {
+    font-size: 0.8rem;
+}
+
+/* Low Cost Section (Blue) */
+.lowcost-section {
+    background-color: var(--primary-blue);
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+}
+
+.lowcost-section .digit-card {
+    background: white;
+    color: var(--primary-blue);
+}
+
+.lowcost-section .digit-separator {
+    color: white;
+}
+
+.lowcost-section .stat-desc {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.lowcost-section .protocol-link {
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.lowcost-section a {
+    color: white;
+    text-decoration: underline;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.btn-white {
+    background: white;
+    color: var(--primary-blue);
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.btn-white:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Design Docs Section */
+.design-section {
+    background-color: #F8FAFC;
+    padding: 100px 0;
+    text-align: center;
+    /* Title centered */
+}
+
+.design-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+}
+
+.design-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.doc-col h4 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #64748B;
+    /* Muted header */
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.doc-item {
+    margin-bottom: 30px;
+}
+
+.doc-item p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #334155;
+}
+
+.doc-link-list {
+    list-style: none;
+}
+
+.doc-link-list li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #E2E8F0;
+    font-size: 0.9rem;
+    color: #334155;
+    cursor: pointer;
+}
+
+.doc-link-list li:hover {
+    color: var(--primary-blue);
+}
