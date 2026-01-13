@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H&M - Fashion Online</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        .navbar {
+            background-color: #faf9f8;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: #222;
+            letter-spacing: -1px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-item > a {
+            display: block;
+            text-decoration: none;
+            color: #222;
+            font-size: 14px;
+            padding: 10px 20px;
+            text-transform: capitalize;
+            font-weight: 400;
+            transition: background-color 0.2s;
+        }
+
+        .nav-item > a:hover {
+            background-color: #fff;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .icon-btn {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .icon-btn:hover {
+            opacity: 0.7;
+        }
+
+        /* Mega Menu */
+        .mega-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+            max-height: 0;
+            overflow: hidden;
+        }
+
+        .nav-item:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            max-height: 600px;
+        }
+
+        .mega-menu-content {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 40px 30px;
+            gap: 40px;
+        }
+
+        .mega-menu-categories {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .mega-category h4 {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .mega-category ul {
+            list-style: none;
+        }
+
+        .mega-category ul li {
+            margin-bottom: 8px;
+        }
+
+        .mega-category ul li a {
+            text-decoration: none;
+            color: #666;
+            font-size: 13px;
+            transition: color 0.2s;
+        }
+
+        .mega-category ul li a:hover {
+            color: #e50010;
+        }
+
+        .mega-menu-featured {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .featured-item {
+            position: relative;
+            height: 280px;
+            background: linear-gradient(135deg, #e8e8e8 0%, #d8d8d8 100%);
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .featured-item:hover .featured-overlay {
+            background: rgba(0,0,0,0.4);
+        }
+
+        .featured-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+            color: white;
+            transition: background 0.3s;
+        }
+
+        .featured-overlay h5 {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .featured-overlay p {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 10;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .hero-btn {
+            padding: 15px 40px;
+            background-color: #222;
+            color: white;
+            border: none;
+            font-size: 14px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            letter-spacing: 1px;
+        }
+
+        .hero-btn:hover {
+            background-color: #e50010;
+        }
+
+        /* Categories */
+        .categories {
+            padding: 60px 30px;
+            background-color: white;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 300;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .category-card {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+            cursor: pointer;
+            background-color: #f5f5f5;
+        }
+
+        .category-card:hover .category-image {
+            transform: scale(1.05);
+        }
+
+        .category-image {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s;
+        }
+
+        .category-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            padding: 30px;
+            color: white;
+        }
+
+        .category-overlay h3 {
+            font-size: 28px;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+
+        .category-overlay p {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Featured Products */
+        .featured {
+            padding: 60px 30px;
+            background-color: #faf9f8;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: white;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 350px;
+            background-color: #e8e8e8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: #ccc;
+        }
+
+        .product-info {
+            padding:15px;
+        }
+
+        .product-info h4 {
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 8px;
+            color: #222;
+        }
+
+        .product-price {
+            font-size: 16px;
+            font-weight: 600;
+            color: #222;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #faf9f8;
+            padding: 60px 30px 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1600px;
+            margin: 0 auto 40px;
+        }
+
+        .footer-section h4 {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            text-decoration: none;
+            color: #666;
+            font-size: 13px;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: #e50010;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #666;
+            font-size: 12px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mega-menu-content {
+                grid-template-columns: 1fr;
+            }
+
+            .mega-menu-categories {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-left">
+            <div class="logo">H&M</div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#women">Women</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-categories">
+                                <div class="mega-category">
+                                    <h4>Shop by Product</h4>
+                                    <ul>
+                                        <li><a href="#">View All</a></li>
+                                        <li><a href="#">New Arrivals</a></li>
+                                        <li><a href="#">Dresses</a></li>
+                                        <li><a href="#">Tops & T-shirts</a></li>
+                                        <li><a href="#">Jeans</a></li>
+                                        <li><a href="#">Pants</a></li>
+                                        <li><a href="#">Skirts</a></li>
+                                        <li><a href="#">Jackets & Coats</a></li>
+                                        <li><a href="#">Knitwear</a></li>
+                                        <li><a href="#">Basics</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-category">
+                                    <h4>Trending</h4>
+                                    <ul>
+                                        <li><a href="#">Party Shop</a></li>
+                                        <li><a href="#">Premium Selection</a></li>
+                                        <li><a href="#">Wardrobe Essentials</a></li>
+                                        <li><a href="#">Studio Collection</a></li>
+                                        <li><a href="#">Conscious Choice</a></li>
+                                        <li><a href="#">Sports</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-category">
+                                    <h4>Accessories</h4>
+                                    <ul>
+                                        <li><a href="#">View All</a></li>
+                                        <li><a href="#">Bags</a></li>
+                                        <li><a href="#">Jewelry</a></li>
+                                        <li><a href="#">Hats & Scarves</a></li>
+                                        <li><a href="#">Belts</a></li>
+                                        <li><a href="#">Shoes</a></li>
+                                        <li><a href="#">Sunglasses</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-category">
+                                    <h4>Inspiration</h4>
+                                    <ul>
+                                        <li><a href="#">Magazine</a></li>
+                                        <li><a href="#">Style Guide</a></li>
+                                        <li><a href="#">H&M More</a></li>
+                                        <li><a href="#">Sustainability</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mega-menu-featured">
+                                <div class="featured-item" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                    <div class="featured-overlay">
+                                        <h5>Spring Collection</h5>
+                                        <p>Shop Now</p>
+                                    </div>
+                                </div>
+                                <div class="featured-item" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                    <div class="featured-overlay">
+                                        <h5>Premium Selection</h5>
+                                        <p>Explore</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#men">Men</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-categories">
+                                <div class="mega-category">
+                                    <h4>Shop by Product</h4>
+                                    <ul>
+                                        <li><a href="#">View All</a></li>
+                                        <li><a href="#">New Arrivals</a></li>
+                                        <li><a href="#">T-shirts & Tanks</a></li>
+                                        <li><a href="#">Shirts</a></li>
+                                        <li><a href="#">Jeans</a></li>
+                                        <li><a href="#">Pants</a></li>
+                                        <li><a href="#">Hoodies & Sweatshirts</a></li>
+                                        <li><a href="#">Jackets & Coats</a></li>
+                                        <li><a href="#">Suits & Blazers</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-category">
+                                    <h4>Trending</h4>
+                                    <ul>
+                                        <li><a href="#">Premium Selection</a></li>
+                                        <li><a href="#">Smart Casual</a></li>
+                                        <li><a href="#">Sportswear</a></li>
+                                        <li><a href="#">Workwear</a></li>
+                                        <li><a href="#">Basics</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-category">
+                                    <h4>Accessories</h4>
+                                    <ul>
+                                        <li><a href="#">View All</a></li>
+                                        <li><a href="#">Bags & Backpacks</a></li>
+                                        <li><a href="#">Shoes</a></li>
+                                        <li><a href="#">Belts</a></li>
+                                        <li><a href="#">Hats & Caps</a></li>
+                                        <li><a href="#">Watches</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-category">
+                                    <h4>Inspiration</h4>
+                                    <ul>
+                                        <li><a href="#">Magazine</a></li>
+                                        <li><a href="#">Style Guide</a></li>
+                                        <li><a href="#">Gift Ideas</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mega-menu-featured">
+                                <div class="featured-item" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                                    <div class="featured-overlay">
+                                        <h5>New Season</h5>
+                                        <p>Shop Now</p>
+                                    </div>
+                                </div>
+                                <div class="featured-item" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                                    <div class="featured-overlay">
+                                        <h5>Workwear Edit</h5>
+                                        <p>Explore</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#kids">Kids</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-categories">
+                                <div class="mega-category">
+                                    <h4>Girls</h4>
+                                    <ul>
+                                        <li><a href="#">View All</a></li>
+                                        <li><a href="#">New Arrivals</a></li>
+                                        <li><a href="#">Dresses & Skirts</a></li>
+                                        <li><a href="#">Tops & T-shirts</a></li>
+                                        <li><a href="#">Pants & Leggings</a></li>
+                                        <li><a href="#">Outerwear</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-category">
+                                    <h4>Boys</h4>
+                                    <ul>
+                                        <li><a href="#">View All</a></li>
+                                        <li><a href="#">New Arrivals</a></li>
+                                        <li><a href="#">T-shirts & Shirts</a></li>
+                                        <li><a href="#">Pants & Jeans</a></li>
+                                        <li><a href="#">Hoodies & Sweatshirts</a></li>
+                                        <li><a href="#">Outerwear</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-category">
+                                    <h4>Baby</h4>
+                                    <ul>
+                                        <li><a href="#">Newborn 0-9M</a></li>
+                                        <li><a href="#">Baby 9M-4Y</a></li>
+                                        <li><a href="#">Bodysuits</a></li>
+                                        <li><a href="#">Sleepwear</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-category">
+                                    <h4>Shop by</h4>
+                                    <ul>
+                                        <li><a href="#">Character Shop</a></li>
+                                        <li><a href="#">Sportswear</a></li>
+                                        <li><a href="#">Shoes & Accessories</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mega-menu-featured">
+                                <div class="featured-item" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
+                                    <div class="featured-overlay">
+                                        <h5>Back to School</h5>
+                                        <p>Shop Now</p>
+                                    </div>
+                                </div>
+                                <div class="featured-item" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                                    <div class="featured-overlay">
+                                        <h5>Character Shop</h5>
+                                        <p>Explore</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#home">H&M HOME</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-categories">
+                                <div class="mega-category">
+                                    <h4>Bedroom</h4>
+                                    <ul>
+                                        <li><a href="#">View All</a></li>
+                                        <li><a href="#">Bedding</a></li>
+                                        <li><a href="#">Cushions & Covers</a></li>
+                                        <li><a href="#">Curtains</a></li>
+                                        <li><a href="#">Rugs</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-category">
+                                    <h4>Living Room</h4>
+                                    <ul>
+                                        <li><a href="#">View All</a></li>
+                                        <li><a href="#">Decorations</a></li>
+                                        <li><a href="#">Candles & Scents</a></li>
+                                        <li><a href="#">Throws & Blankets</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-category">
+                                    <h4>Kitchen & Dining</h4>
+                                    <ul>
+                                        <li><a href="#">View All</a></li>
+                                        <li><a href="#">Tableware</a></li>
+                                        <li><a href="#">Kitchen Textiles</a></li>
+                                        <li><a href="#">Storage</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-category">
+                                    <h4>Bathroom</h4>
+                                    <ul>
+                                        <li><a href="#">View All</a></li>
+                                        <li><a href="#">Towels</a></li>
+                                        <li><a href="#">Bath Mats</a></li>
+                                        <li><a href="#">Accessories</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mega-menu-featured">
+                                <div class="featured-item" style="background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);">
+                                    <div class="featured-overlay">
+                                        <h5>New in Home</h5>
+                                        <p>Shop Now</p>
+                                    </div>
+                                </div>
+                                <div class="featured-item" style="background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);">
+                                    <div class="featured-overlay">
+                                        <h5>Spring Refresh</h5>
+                                        <p>Explore</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#beauty">Beauty</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-categories">
+                                <div class="mega-category">
+                                    <h4>Makeup</h4>
+                                    <ul>
+                                        <li><a href="#">View All</a></li>
+                                        <li><a href="#">Face</a></li>
+                                        <li><a href="#">Eyes</a></li>
+                                        <li><a href="#">Lips</a></li>
+                                        <li><a href="#">Nails</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-category">
+                                    <h4>Skincare</h4>
+                                    <ul>
+                                        <li><a href="#">View All</a></li>
+                                        <li><a href="#">Cleansers</a></li>
+                                        <li><a href="#">Moisturizers</a></li>
+                                        <li><a href="#">Serums</a></li>
+                                        <li><a href="#">Masks</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-category">
+                                    <h4>Hair</h4>
+                                    <ul>
+                                        <li><a href="#">View All</a></li>
+                                        <li><a href="#">Shampoo & Conditioner</a></li>
+                                        <li><a href="#">Styling</a></li>
+                                        <li><a href="#">Treatments</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-category">
+                                    <h4>Body</h4>
+                                    <ul>
+                                        <li><a href="#">View All</a></li>
+                                        <li><a href="#">Body Care</a></li>
+                                        <li><a href="#">Fragrance</a></li>
+                                        <li><a href="#">Tools & Accessories</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mega-menu-featured">
+                                <div class="featured-item" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
+                                    <div class="featured-overlay">
+                                        <h5>Beauty Bestsellers</h5>
+                                        <p>Shop Now</p>
+                                    </div>
+                                </div>
+                                <div class="featured-item" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
+                                    <div class="featured-overlay">
+                                        <h5>Skincare Routine</h5>
+                                        <p>Explore</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-icons">
+            <button class="icon-btn">🔍</button>
+            <button class="icon-btn">👤</button>
+            <button class="icon-btn">❤️</button>
+            <button class="icon-btn">🛍️</button>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>NEW ARRIVALS</h1>
+        <p>Discover the latest trends in fashion</p>
+        <button class="hero-btn">Shop Now</button>
+    </div>
+</section>
+
+<!-- Categories -->
+<section class="categories">
+    <h2 class="section-title">Shop by Category</h2>
+    <div class="category-grid">
+        <div class="category-card">
+            <div class="category-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+            <div class="category-overlay">
+                <h3>Women</h3>
+                <p>Explore Collection</p>
+            </div>
+        </div>
+        <div class="category-card">
+            <div class="category-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+            <div class="category-overlay">
+                <h3>Men</h3>
+                <p>Explore Collection</p>
+            </div>
+        </div>
+        <div class="category-card">
+            <div class="category-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+            <div class="category-overlay">
+                <h3>Kids</h3>
+                <p>Explore Collection</p>
+            </div>
+        </div>
+        <div class="category-card">
+            <div class="category-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);"></div>
+            <div class="category-overlay">
+                <h3>H&M Home</h3>
+                <p>Explore Collection</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Products -->
+<section class="featured">
+    <h2 class="section-title">Trending Now</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <div class="product-image">👕</div>
+            <div class="product-info">
+                <h4>Relaxed Fit T-shirt</h4>
+                <p class="product-price">$12.99</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">👖</div>
+            <div class="product-info">
+                <h4>Slim Fit Jeans</h4>
+                <p class="product-price">$39.99</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">👗</div>
+            <div class="product-info">
+                <h4>Floral Print Dress</h4>
+                <p class="product-price">$29.99</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">🧥</div>
+            <div class="product-info">
+                <h4>Denim Jacket</h4>
+                <p class="product-price">$49.99</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>Shop</h4>
+            <ul>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Baby</a></li>
+                <li><a href="#">Kids</a></li>
+                <li><a href="#">H&M Home</a></li>
+                <li><a href="#">Beauty</a></li>
+                <li><a href="#">Sale</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Corporate Info</h4>
+            <ul>
+                <li><a href="#">Career at H&M</a></li>
+                <li><a href="#">About H&M Group</a></li>
+                <li><a href="#">Sustainability</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Investor Relations</a></li>
+                <li><a href="#">Corporate Governance</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Help</h4>
+            <ul>
+                <li><a href="#">Customer Service</a></li>
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">Find a Store</a></li>
+                <li><a href="#">Legal & Privacy</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Report a Scam</a></li>
+                <li><a href="#">Cookie Notice</a></li>
+                <li><a href="#">Cookie Settings</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Sign up now</h4>
+            <ul>
+                <li><a href="#">Become a member</a></li>
+                <li><a href="#">H&M Newsletter</a></li>
+                <li><a href="#">Gift Cards</a></li>
+                <li><a href="#">Student Discount</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 H&M Hennes & Mauritz AB. All rights reserved. This is a clone project for educational purposes.</p>
+    </div>
+</footer>
+</body>
+</html>
+
