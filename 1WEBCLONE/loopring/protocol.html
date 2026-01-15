@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocol - Loopring</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="protocol.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar reveal">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="page1/loopringlogo.png" alt="Loopring" class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="protocol.html" class="nav-link" style="color: var(--primary-blue);">Protocol</a></li>
+                <li><a href="#" class="nav-link">LRC</a></li>
+                <li><a href="#" class="nav-link">Blog</a></li>
+                <li><a href="#" class="btn-launch-sm">Launch App</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <div style="padding-top: 80px;">
+
+        Hero: Video Animation
+        <section class="protocol-hero">
+            <div class="container reveal">
+                <div class="video-container">
+                    <!-- time.mp4 plays once when visible -->
+                    <video id="introVideo" class="protocol-video" muted playsinline>
+                        <source src="page3/time.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- High Throughput -->
+        <section class="throughput-section">
+            <!-- <div class="container">
+                <h3 class="stat-label reveal">High Throughput</h3>
+                <div class="stat-number-box reveal delay-100">
+                    <div class="digit-card">2</div>
+                    <div class="digit-separator">,</div>
+                    <div class="digit-card">0</div>
+                    <div class="digit-card">2</div>
+                    <div class="digit-card">5</div>
+                </div> -->
+            <p class="stat-desc reveal delay-200">
+                Loopring protocol can settle up to <strong>2,025</strong> trades per second while guaranteeing the
+                same level of security as the underlying Ethereum blockchain. This is made possible by using a
+                construction called <strong>zkRollup</strong>, which aggregates and executes transactions off-chain,
+                in a provably correct manner. For context, prior versions of Loopring (and current versions of some
+                other DEX protocols), can settle only 2 or 3 trades per second. With Loopring's layer 2 scaling,
+                non-custodial exchanges can match the performance of custodial competitors.
+            </p>
+            <div class="reveal delay-300">
+                <div class="protocol-link-row">
+                    <a href="#" class="protocol-link" style="color:var(--primary-blue);">
+                        <i class="fas fa-arrow-right"></i> Loopring Smart Contracts <i class="fas fa-file-pdf"></i>
+                    </a>
+                    <a href="#" class="protocol-link" style="color:var(--primary-blue);">
+                        <i class="fas fa-arrow-right"></i> Loopring ZK Circuits <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <a href="#" class="btn-launch-sm" style="display:inline-block;">Check out Loopring's latest
+                    release</a>
+            </div>
+    </div>
+    </section>
+
+    <!-- Low Cost (Blue) -->
+    <section class="lowcost-section">
+        <div class="container">
+            <h3 class="stat-label reveal" style="color:white;">Low Settlement Cost</h3>
+            <div class="stat-number-box reveal delay-100">
+                <div class="digit-card">4</div>
+                <div class="digit-card">5</div>
+                <div class="digit-card">0</div>
+            </div>
+            <p class="stat-desc reveal delay-200">
+                The settlement cost per trade is roughly <strong>450 to 800 GAS</strong> on layer-1, which is
+                0.15-0.30% of the cost of most layer-1 DEX protocols. From a user's POV, there are no gas fees; just
+                'normal style' fees of a few basis points or cents.
+            </p>
+            <div class="reveal delay-300">
+                <div class="protocol-link-row">
+                    <a href="#" class="protocol-link">
+                        <i class="fas fa-arrow-right"></i> Loopring Smart Contracts <i class="fas fa-file-pdf"></i>
+                    </a>
+                    <a href="#" class="protocol-link">
+                        <i class="fas fa-arrow-right"></i> Loopring ZK Circuits <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <a href="#" class="btn-white">Check out Loopring's latest release</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Docs -->
+    <section class="design-section">
+        <div class="container">
+            <h2 class="design-title reveal">Design</h2>
+
+            <div class="design-grid">
+                <div class="doc-col reveal delay-100">
+                    <h4>Whitepaper (Deprecated)</h4>
+                    <div class="doc-item">
+                        <p>We published a Whitepaper for version 1.0, 1.5, and 2.0 (non-zkRollup). For 3.0, we
+                            wanted to verify the design first. Please refer to version 3.6 Design Doc below.</p>
+                    </div>
+
+                    <h4>Design Doc</h4>
+                    <div class="doc-item">
+                        <p>We designed Loopring 3.0 with two major objectives in mind: security and performance. The
+                            protocol ensures that users can withdraw their assets under all circumstances. Loopring
+                            protocol makes no assumptions about the operators behavior.</p>
+                        <p>To significantly improve throughput and lower settlement costs, Loopring 3.0 migrates
+                            most computations off-chain and uses the underlying blockchain as a data and ZKP
+                            verification layer. Data availability is guaranteed on-chain.</p>
+                        <a href="#" style="color:#64748B; font-size:0.85rem; font-weight:600;">Loopring 3.8 Design
+                            Doc -------------></a>
+                    </div>
+                </div>
+
+                <div class="doc-col reveal delay-200">
+                    <h4>Building Blocks</h4>
+                    <ul class="doc-link-list">
+                        <li>Vitalik's post on data availability -------------></li>
+                        <li>Vitalik's tech-talk on zkRollup -------------></li>
+                        <li>Zero Knowledge Proof / ZKP -------------></li>
+                        <li>libsnark -----------------------------></li>
+                        <li>ethsnarks ----------------------------></li>
+                        <li>Poseidon hash function --------------></li>
+                        <li>Quad-Merkle Tree --------------------></li>
+                        <li>Loopring 3.6 smart contracts ----------></li>
+                        <li>Loopring 3.6 ZKP circuits -----------></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+
+    <!-- Footer -->
+    <footer style="padding: 40px; text-align: center; color: #64748B; font-size: 0.8rem; background: white;">
+        <p>Copyright &copy; 2024 Loopring Technology Limited</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Animation Observer
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const revealElements = document.querySelectorAll('.reveal');
+            revealElements.forEach(el => observer.observe(el));
+
+            // Video Auto-Play Observer
+            const videoElement = document.getElementById('introVideo');
+            if (videoElement) {
+                const videoObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && videoElement.paused) {
+                            videoElement.play();
+                            // Optional: unobserve if you only want it to play once
+                            // videoObserver.unobserve(videoElement);
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                videoObserver.observe(videoElement);
+            }
+        });
+    </script>
+</body>
+
+</html> 
