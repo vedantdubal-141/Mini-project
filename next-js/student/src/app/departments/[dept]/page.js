@@ -1,12 +1,13 @@
 import { notFound } from "next/navigation";
 import { getDepartment, studentsByDepartment } from "@/data/students";
 
-export default function DepartmentPage({ params }) {
-  const department = getDepartment(params.dept);
+export default async function DepartmentPage({ params }) {
+  const { dept } = await params;
+  const department = getDepartment(dept);
   if (!department) {
     notFound();
   }
-  const list = studentsByDepartment(params.dept);
+  const list = studentsByDepartment(dept);
   return (
     <div>
       <h1>{department.name}</h1>
