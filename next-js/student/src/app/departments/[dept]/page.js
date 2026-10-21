@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import { getDepartment, studentsByDepartment } from "@/data/students";
 
+export const instant = false;
+
 export default async function DepartmentPage({ params }) {
   const { dept } = await params;
   const department = getDepartment(dept);

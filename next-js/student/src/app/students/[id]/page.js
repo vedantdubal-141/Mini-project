@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import { getStudent } from "@/data/students";
 
+export const instant = false;
+
 export default async function StudentProfile({ params }) {
   const { id } = await params;
   const student = getStudent(id);
