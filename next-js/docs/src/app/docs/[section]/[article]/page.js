@@ -1,9 +1,10 @@
 import { notFound } from "next/navigation";
 import { getSection, getArticle } from "@/data/docs";
 
-export default function ArticlePage({ params }) {
-  const section = params.section;
-  const article = params.article;
+export const instant = false;
+
+export default async function ArticlePage({ params }) {
+  const { section, article } = await params;
   const sec = getSection(section);
   const art = getArticle(section, article);
   if (!sec || !art) {
